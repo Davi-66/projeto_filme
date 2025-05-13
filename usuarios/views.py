@@ -14,7 +14,7 @@ from sistema.models import Usuario
 def login(request):
     return render(
         request,
-        'login.html'
+        'usuarios/login.html'
     )
 
 def criarUsuario(request):
@@ -27,7 +27,7 @@ def criarUsuario(request):
 
         if form.is_valid(): # Se os dados forem validos são salvos no banco de dados(BD)
             form.save()
-            return redirect('/usuario/login')
+            return redirect('usuario/login')
 
 
     else:
@@ -37,7 +37,7 @@ def criarUsuario(request):
     
     return render (
         request, 
-        'cadastro.html', 
+        'usuarios/cadastrar.html', 
         {'form': form}
     )
 

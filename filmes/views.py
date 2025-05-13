@@ -12,7 +12,7 @@ def cadastrarFilme(request):
 
         if form.is_valid(): 
             form.save()
-            return redirect('listarfilmes')
+            return redirect('listar')
 
 
     else:
