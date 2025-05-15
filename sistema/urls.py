@@ -3,7 +3,7 @@ from sistema import views
 
 # Informa qual será a rota que irá chamar determinada view(função).
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name = 'index'),
     
     
     
